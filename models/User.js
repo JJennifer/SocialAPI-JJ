@@ -11,7 +11,9 @@ const usertable = new Schema(
         email: {type: String, 
         required: true, 
         unique: true,
-        
+        validate: [validateEmail, "Valid email address"],
+        match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{3,8})$/, "Valid email address"]
+        },
     }
 )
 
@@ -21,5 +23,3 @@ const usertable = new Schema(
 
 
 
-const Users = model('Users', usertable)
-module.exports = Users
