@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(routes)
 
 database.once('open', () => {
-    app.listen(PORT, () => {
-      console.log(`port ${PORT}!`);
-    });
+  app.listen(PORT, () => {
+    console.log(`port ${PORT}!`);
   });
+});
