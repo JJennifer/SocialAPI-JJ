@@ -1,8 +1,10 @@
+const { Types, Schema } = require("mongoose")
+
 const reactionTable = new Schema(
     {
         reactionId: {
           type: Schema.Types.ObjectId,
-    
+          default: () => new Types.ObjectId(),
         },
         reactionBody: {
           type: String,
@@ -20,4 +22,12 @@ const reactionTable = new Schema(
           required: true,
         },
     },
-)
+    {
+      toJSON: {
+        getters: true,
+      },
+      id: false,
+    }
+);
+
+module.exports =reactionTable

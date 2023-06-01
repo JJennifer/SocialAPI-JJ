@@ -1,3 +1,7 @@
+const reactionTable = require("./Reactions");
+const { Schema, model } = require("mongoose");
+
+
 const thoughtTable = new Schema (
     {
       thoughtText: {
@@ -15,6 +19,16 @@ const thoughtTable = new Schema (
         require: true,
         unique: true,
       },
-
+      reactions: [reactionTable],
+    },
+    {
+      toJSON: {
+        getters: true,
+      },
+      id: false,
     }
+
 );
+
+const Thought = model("Thought", thoughtTable);
+module.exports = Thought;
