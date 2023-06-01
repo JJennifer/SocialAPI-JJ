@@ -12,7 +12,7 @@ const user = [
 const thought = [
     "Code is so hard",
     "I have not slept in almost three months",
-    "I have no social like. LOL!",
+    "I have no social life. LOL!",
     "This bootcamp was not what I expected",
     "I am drained to say the least",
     "Sometimes I forget how old I am",
@@ -20,3 +20,11 @@ const thought = [
     "I am glad I left my old job"
 ]
 
+const reaction = [
+    "I agree! I also think it is hard",
+    "I have been sleeping like a baby",
+    "I have been going out every weekend",
+    "I feel like I have work/life balance",
+    "Best investment I did",
+    "You will recover. Just finish through"
+]
