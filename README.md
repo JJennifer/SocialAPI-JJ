@@ -1,4 +1,4 @@
-# Jennifer's Social
+# Social Platform
  
 
   ## Table of Contents
